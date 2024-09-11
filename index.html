@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Money Exchange - Обмен валюты</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo-link" href=""
+          ><img class="header__logo-img" src="./img/logo.png" alt=""
+        /></a>
+        <ul class="header__link-list">
+          <li class="header__link-list-item">
+            <a draggable="false" class="header__link-list-link" href=""
+              ><img
+                draggable="false"
+                src="./img/whatsapp.svg"
+                width="34"
+                height="34"
+                alt=""
+              /><span>Watsapp</span></a
+            >
+          </li>
+          <li>
+            <a class="header__link-list-link" href=""
+              ><img
+                draggable="false"
+                src="./img/telegram.svg"
+                width="34"
+                height="34"
+                alt=""
+              /><span>Telegram</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="wrapper">
+      <main class="main">
+        <section class="hero">
+          <h1 class="hero__title">Обмен рублей на баты</h1>
+          <p class="hero__description">
+            Безопасный и быстрый обмен рублей на баты,<br />
+            с поддержкой 24/7
+          </p>
+          <div class="currency-card">
+            <div class="currency-header">
+              <h3>Курс обмена в Паттайе</h3>
+            </div>
+            <div class="currency-row">
+              <span class="currency-name --header">Валюта</span>
+              <span class="currency-name --header">Покупка</span>
+              <span class="currency-name --header">Продажа</span>
+            </div>
+            <div class="currency-row">
+              <span class="currency-name">RUB</span>
+              <span class="currency-value">00.36 ฿</span>
+              <span class="currency-value">00.36 ฿</span>
+            </div>
+            <div class="currency-row">
+              <span class="currency-name">USD</span>
+              <span class="currency-value">33.73 ฿</span>
+              <span class="currency-value">33.73 ฿</span>
+            </div>
+            <div class="currency-row">
+              <span class="currency-name">USDT</span>
+              <span class="currency-value">33.73 ฿</span>
+              <span class="currency-value">33.73 ฿</span>
+            </div>
+          </div>
+          <div class="converter">
+            <div class="converter__input-wrapper">
+              <label class="converter__input-label" for="fromAmount"
+                >Вы отдаете:
+              </label>
+              <p class="converter__course">1 thb = 2.5 rub (будет меняться)</p>
+              <div class="converter__input-container">
+                <input
+                  class="converter__input"
+                  type="number"
+                  id="fromAmount"
+                  value="100"
+                  min="0"
+                />
+                <select class="converter__input-select" id="fromCurrency">
+                  <option value="RUB" selected>RUB (Рубли)</option>
+                  <option value="THB">THB (Баты)</option>
+                </select>
+              </div>
+            </div>
+            <button class="converter__swap-button" id="swapButton">
+              <img width="20" height="20" src="./img/swap.svg" alt="" />
+            </button>
+            <div class="converter__input-wrapper">
+              <label class="converter__input-label" for="toAmount"
+                >Вы получаете:</label
+              >
+              <div class="converter__input-container">
+                <input
+                  class="converter__input"
+                  type="number"
+                  id="toAmount"
+                  value="0.40"
+                  min="0"
+                />
+                <select class="converter__input-select" id="toCurrency">
+                  <option value="RUB">RUB (Рубли)</option>
+                  <option value="THB" selected>THB (Баты)</option>
+                </select>
+              </div>
+            </div>
+            <button class="converter__exchange-button">начать обмен</button>
+          </div>
+        </section>
+        <section class="change-selection">
+          <ul class="change-selection__list">
+            <li class="change-selection__list-item">
+              <h2 class="change-selection__list-item-title">
+                Наличные через банкомат
+              </h2>
+              <div class="change-selection__image-wrapper">
+                <img
+                  class="change-selection__list-item-image"
+                  width="100"
+                  src="./img/atm.svg"
+                  alt=""
+                />
+              </div>
+              <p class="change-selection__list-item-description">
+                Выдадим наличные баты через банкомат через 1 минуту по QR-коду
+              </p>
+              <a class="change-selection__list-item-link" href=""
+                >обменять<img
+                  class="change-selection__list-item-link-arrow"
+                  src="img/right-arrow.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li class="change-selection__list-item">
+              <h2 class="change-selection__list-item-title">
+                Доставка наличных
+              </h2>
+              <div class="change-selection__image-wrapper">
+                <img
+                  class="change-selection__list-item-image"
+                  width="100"
+                  src="./img/bike.svg"
+                  alt=""
+                />
+              </div>
+              <p class="change-selection__list-item-description">
+                Доставим наличные баты курьером до вашей двери за кратчайший
+                срок
+              </p>
+              <a class="change-selection__list-item-link" href=""
+                >связаться с оператором<img
+                  class="change-selection__list-item-link-arrow"
+                  src="img/right-arrow.svg"
+                  alt=""
+                  width="30"
+              /></a>
+            </li>
+            <li class="change-selection__list-item">
+              <h2 class="change-selection__list-item-title">
+                Наличные в офисе
+              </h2>
+              <div class="change-selection__image-wrapper">
+                <img
+                  class="change-selection__list-item-image"
+                  width="100"
+                  src="./img/office.svg"
+                  alt=""
+                />
+              </div>
+              <p class="change-selection__list-item-description">
+                Обменяйте валюту в одном из офисов
+              </p>
+              <a class="change-selection__list-item-link" href=""
+                >Подобрать офис
+                <img
+                  class="change-selection__list-item-link-arrow"
+                  src="img/right-arrow.svg"
+                  alt=""
+                  width="30"
+              /></a>
+            </li>
+            <li class="change-selection__list-item">
+              <h2 class="change-selection__list-item-title">
+                На счет тайского банка
+              </h2>
+              <div class="change-selection__image-wrapper">
+                <img
+                  class="change-selection__list-item-image"
+                  width="120"
+                  src="./img/bank.svg"
+                  alt=""
+                />
+              </div>
+              <p class="change-selection__list-item-description">
+                Мы можем произвести перевод денег по реквизитам на счет банка
+              </p>
+              <a class="change-selection__list-item-link" href=""
+                >узнать подробности
+                <img
+                  class="change-selection__list-item-link-arrow"
+                  src="img/right-arrow.svg"
+                  alt=""
+                  width="30"
+              /></a>
+            </li>
+          </ul>
+        </section>
+        <section class="advantages">
+          <h2 class="advantages__title">
+            Как легко обменять валюту за 4 простых шага
+          </h2>
+          <ol class="advantages__list">
+            <li class="advantages__list-item">
+              <div class="advantages__list-item-image-wrapper">
+                <img
+                  draggable="false"
+                  class="advantages__list-item-image"
+                  src="./img/coins.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </div>
+              <h3 class="advantages__list-item-title">
+                Выберите валюту и сумму:
+              </h3>
+              <p class="advantages__list-item-decsription">
+                Определите, какую валюту вы хотите обменять и в каком объеме.
+              </p>
+              <p class="advantages__list-item-number">1</p>
+            </li>
+            <li class="advantages__list-item">
+              <div class="advantages__list-item-image-wrapper">
+                <img
+                  draggable="false"
+                  class="advantages__list-item-image"
+                  src="./img/card.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </div>
+              <h3 class="advantages__list-item-title">
+                Укажите способ получения:
+              </h3>
+              <p class="advantages__list-item-decsription">
+                Выберите, хотите ли получить деньги на счет, в банкомате или
+                через доставку.
+              </p>
+              <p class="advantages__list-item-number">2</p>
+            </li>
+            <li class="advantages__list-item">
+              <div class="advantages__list-item-image-wrapper">
+                <img
+                  draggable="false"
+                  class="advantages__list-item-image"
+                  src="./img/checkmark.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </div>
+              <h3 class="advantages__list-item-title">Подтвердите обмен:</h3>
+              <p class="advantages__list-item-decsription">
+                Проверьте данные и подтвердите операцию для завершения обмена.
+              </p>
+              <p class="advantages__list-item-number">3</p>
+            </li>
+            <li class="advantages__list-item">
+              <div class="advantages__list-item-image-wrapper">
+                <img
+                  draggable="false"
+                  class="advantages__list-item-image"
+                  src="./img/cash.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </div>
+              <h3 class="advantages__list-item-title">Получите деньги:</h3>
+              <p class="advantages__list-item-decsription">
+                Снимите наличные, дождитесь перевода на счет или доставки на
+                указанный адрес.
+              </p>
+              <p class="advantages__list-item-number">4</p>
+            </li>
+          </ol>
+        </section>
+        <section class="form-section">
+          <h2 class="form-section__title">
+            Оставьте заявку<br />
+            на обмен или перевод
+          </h2>
+          <p class="form-section__description">
+            Наш менеджер свяжется с Вами в течение 15 минут и проведет операцию
+          </p>
+          <form class="form" action="">
+            <input
+              placeholder="Ваше имя"
+              class="form__input"
+              type="text"
+              name=""
+              id=""
+            />
+            <input
+              placeholder="+7 (999) 999-99-99"
+              class="form__input"
+              type="tel"
+              name=""
+              id=""
+            />
+            <select class="form__select" name="" id="">
+              <option value="">Выдача через банкомат</option>
+              <option value="">Доставка налиных</option>
+              <option value="">На счет в банке</option>
+              <option value="">Получить в офисе</option>
+              <option value="">Оплатить услугу</option>
+            </select>
+            <button class="form__button" type="submit">Оставить заявку</button>
+            <legend class="form__legend">
+              *Отправляя эту заявку, вы соглашаетесь с нашей Политикой
+              конфиденциальности.
+            </legend>
+          </form>
+        </section>
+        <section class="reasons">
+          <h2 class="reasons__title">Почему стоит выбрать наш сервис?</h2>
+          <ul class="reasons__list">
+            <li class="reasons__list-item">
+              <h3 class="reasons__list-item-title">
+                Поддержка всех типов карт:
+              </h3>
+              <p class="reasons__list-item-description">
+                Visa, MasterCard, Union Pay и другие популярные карты для
+                удобства оплаты.
+              </p>
+              <div class="reasons__image-wrapper">
+                <img
+                  class="reasons__list-item-image"
+                  src="./img/mastercard.svg"
+                  width="80px"
+                  alt=""
+                /><img
+                  class="reasons__list-item-image"
+                  src="./img/visa.svg"
+                  width="80px"
+                  alt=""
+                /><img
+                  class="reasons__list-item-image"
+                  src="./img/mir.svg"
+                  width="80px"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="reasons__list-item">
+              <h3 class="reasons__list-item-title">
+                Работаем с российскими банками
+              </h3>
+              <p class="reasons__list-item-description">
+                СБЕР, Тинькофф, Альфа-Банк и другие банки для быстрого и
+                удобного перевода.
+              </p>
+              <div class="reasons__image-wrapper reasons__image-wrapper--banks">
+                <img
+                  class="reasons__list-item-image--sber"
+                  src="./img/sber.svg"
+                  width="120px"
+                  alt=""
+                /><img
+                  class="reasons__list-item-image"
+                  src="./img/alfa.svg"
+                  width="80px"
+                  alt=""
+                /><img
+                  class="reasons__list-item-image--tbank"
+                  src="./img/tbank.svg"
+                  width="120px"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="reasons__list-item">
+              <h3
+                class="reasons__list-item-title reasons__list-item-title--services"
+              >
+                Быстрая оплата зарубежных сервисов
+              </h3>
+              <p class="reasons__list-item-description">
+                Легко оплачивайте международные сервисы и покупки без лишних
+                ожиданий.
+              </p>
+              <div class="reasons__image-wrapper">
+                <img
+                  class="reasons__list-item-image"
+                  src="./img/agoda.svg"
+                  width="70px"
+                  alt=""
+                /><img
+                  class="reasons__list-item-image"
+                  src="./img/airbnb.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                /><img
+                  class="reasons__list-item-image"
+                  src="./img/booking.svg"
+                  width="60"
+                  height="60"
+                  alt=""
+                />
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="contacts">
+          <h2 class="contacts__title">Как нас найти?</h2>
+          <div class="contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.7329795698943!2d100.8995437!3d12.860515399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102be03e9df06a7%3A0xfd002bbeba299883!2z5Y2X5rSL5oi_5Lqn!5e0!3m2!1sen!2sth!4v1726052082906!5m2!1sen!2sth"
+              width="100%"
+              height="350"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="contacts__content">
+            <h3 class="contacts__content-title">Контакты</h3>
+            <ul class="contacts__list">
+              <li class="contacts__list-item">
+                <b>Адрес:</b> Seven seas Cote Azure, A5, Na Jomtien, Chon Buri
+                20150
+              </li>
+              <li class="contacts__list-item">
+                <b>Телефон:</b>
+                <a class="hovered" type="tel" href="">+66 088 989 89 89</a>
+              </li>
+              <li class="contacts__list-item">
+                <b>Email:</b
+                ><a class="hovered" type="Email" href=""> exemple@gmail.com</a>
+              </li>
+            </ul>
+            <div class="contacts__messangers">
+              <a class="contacts__messangers-item" href=""
+                ><img src="img/whatsapp.svg" width="40" alt=""
+              /></a>
+              <a class="contacts__messangers-item" href=""
+                ><img src="img/telegram.svg" width="40" alt=""
+              /></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a class="footer__logo-link" href=""
+          ><img class="footer__logo" width="180px" src="./img/logo.png" alt=""
+        /></a>
+        <div>
+          <a class="footer__copyright" href="">Политика конфиденциальности</a>
+          <p>Pro Money Exchange ©2024 Все права защищены</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/index.min.js"></script>
+  </body>
+</html>
